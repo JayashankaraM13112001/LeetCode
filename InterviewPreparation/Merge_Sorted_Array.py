@@ -8,9 +8,6 @@ To accommodate this, nums1 has a length of m + n, where the first m elements den
 '''
 
 def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
-        """
-        Do not return anything, modify nums1 in-place instead.
-        """
         for i in range(n):
             inserted=False
             for j in range(m+i):
