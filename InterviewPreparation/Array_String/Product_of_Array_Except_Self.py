@@ -30,4 +30,4 @@ class Solution:
             answer[i] *= suffix
             suffix *= nums[i]
 
-        return answer
+        return answer  
