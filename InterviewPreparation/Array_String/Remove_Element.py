@@ -7,7 +7,7 @@
     Return k.
 '''
 
-def removeElement(self, nums: List[int], val: int) -> int:
+def removeElement(self, nums: list[int], val: int) -> int:
         left=0
         right=len(nums)-1
 

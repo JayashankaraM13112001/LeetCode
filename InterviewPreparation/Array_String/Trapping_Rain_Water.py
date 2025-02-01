@@ -8,7 +8,7 @@ Explanation: The above elevation map (black section) is represented by array [0,
 
 
 class Solution:
-    def trap(self, height: List[int]) -> int:
+    def trap(self, height: list[int]) -> int:
         if not height or len(height) < 3:
             return 0  # No water can be trapped if there are fewer than 3 bars
 

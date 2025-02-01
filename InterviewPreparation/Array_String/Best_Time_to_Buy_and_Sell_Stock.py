@@ -6,7 +6,7 @@
     Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
 '''
 
-def maxProfit(self, prices: List[int]) -> int:
+def maxProfit(self, prices: list[int]) -> int:
         maxp=0
         left=0
         right=1

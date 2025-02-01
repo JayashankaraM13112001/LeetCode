@@ -6,7 +6,7 @@ Given two integer arrays gas and cost, return the starting gas station's index i
 
 
 class Solution:
-    def canCompleteCircuit(self, gas: List[int], cost: List[int]) -> int:
+    def canCompleteCircuit(self, gas: list[int], cost: list[int]) -> int:
         total_gas=0
         total_cost=0
         tank=0

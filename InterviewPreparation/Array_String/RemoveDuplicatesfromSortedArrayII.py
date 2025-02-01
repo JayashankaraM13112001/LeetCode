@@ -8,14 +8,14 @@
     Do not allocate extra space for another array. You must do this by modifying the input array in-place with O(1) extra memory.
 '''
 
-def removeDuplicates(self, nums: List[int]) -> int:
-        if len(nums)<=2:
+def removeDuplicates(self, nums: list[int]) -> int:
+    if len(nums)<=2:
             return len(nums)
         
-        count=2
-        for i in range(2,len(nums)):
-            if nums[i]!= nums[count-2]:
-                nums[count]=nums[i]
-                count+=1
+    count=2
+    for i in range(2,len(nums)):
+        if nums[i]!= nums[count-2]:
+            nums[count]=nums[i]
+            count+=1
         
-        return count
+    return count
