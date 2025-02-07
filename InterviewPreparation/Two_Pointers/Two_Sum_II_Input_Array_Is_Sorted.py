@@ -26,7 +26,7 @@ Explanation: The sum of -1 and 0 is -1. Therefore index1 = 1, index2 = 2. We ret
 
 
 class Solution:
-    def twoSum(self, numbers: List[int], target: int) -> List[int]:
+    def twoSum(self, numbers: list[int], target: int) -> list[int]:
         left,right=0,len(numbers)-1
 
         while left<right:

@@ -8,19 +8,23 @@
     Notice that you may not slant the container.
 '''
 
-def maxArea(self, height: List[int]) -> int:
-        left,right=0,len(height)-1
-        max=0
-        while left<right:
-            width=right-left
-            h=min(height[left],height[right])
-            area=width*h
-            if area>max:
-                max=area
-            
-            if height[left]>height[right]:
-                right-=1
-            else:
-                left+=1
+def mostWater(height):
+    water=0
+    l,r=0,len(heights)-1
+    
+    while l<r:
+        w=r-l
+        h=min(height[l],height[r])
+        area=w*h
+        if area>water: water=area
+        
+        if height[l]>height[r]:
+            r-=1
+        else:
+            l+=1
+    
+    return water
 
-        return max
+
+heights=[0,1,0,2,1,0,1,3,2,1,2,1]
+print(mostWater(heights))

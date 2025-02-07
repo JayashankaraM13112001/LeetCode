@@ -35,22 +35,25 @@ Explanation: Note that the last line is "shall be    " instead of "shall     be"
 Note that the second line is also left-justified because it contains only one word
 .'''
 
+def textJustify(words, maxWidth):
+    result = []
+    line = []
+    line_length = 0
 
-class Solution:
-    def fullJustify(self, words: List[str], maxWidth: int) -> List[str]:
-        result = []
-        line = []
-        line_length = 0
+    for word in words:
+        if line_length + len(line) + len(word) > maxWidth:
+            for i in range(maxWidth - line_length):
+                line[i % (len(line) - 1 or 1)] += ' '
+            result.append(''.join(line))
+            line, line_length = [], 0
 
-        for word in words:
-            if line_length + len(line) + len(word) > maxWidth:
-                for i in range(maxWidth - line_length):
-                    line[i % (len(line) - 1 or 1)] += ' '
-                result.append(''.join(line))
-                line, line_length = [], 0
+        line.append(word)
+        line_length += len(word)
 
-            line.append(word)
-            line_length += len(word)
+    result.append(' '.join(line).ljust(maxWidth))
+    return result
 
-        result.append(' '.join(line).ljust(maxWidth))
-        return result
+
+words = ["This", "is", "an", "example", "of", "text", "justification."]
+maxWidth = 16
+print(textJustify(words, maxWidth))

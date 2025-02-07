@@ -16,7 +16,7 @@ Output: [1,2,3,4,8,12,11,10,9,5,6,7]
 
  
 class Solution:
-    def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
+    def spiralOrder(self, matrix: list[list[int]]) -> list[int]:
         result = []
         if not matrix:
             return result

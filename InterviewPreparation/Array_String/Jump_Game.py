@@ -3,12 +3,18 @@
 Return true if you can reach the last index, or false otherwise.'''
 
 
-def canJump(self, nums: List[int]) -> bool:
-        pos=nums[0]
-        for i in range(1,len(nums)):
-            if pos==0:
-                return False
-            pos-=1
-            pos=max(pos,nums[i])
-
+def canJump(nums):
+    if not nums:
         return True
+    
+    pos=nums[0]
+    for i in range(1,len(nums)):
+        if pos==0:
+            return False
+        pos-=1
+        pos=max(pos,nums[i])
+    
+    return True
+
+nums=[1,2,1,1,0,1]
+print(canJump(nums))

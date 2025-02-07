@@ -17,7 +17,7 @@ Output: [[15,13,2,5],[14,3,4,1],[12,6,8,9],[16,7,10,11]]'''
 
 
 class Solution:
-    def rotate(self, matrix: List[List[int]]) -> None:
+    def rotate(self, matrix: list[list[int]]) -> None:
         """
         Do not return anything, modify matrix in-place instead.
         """
