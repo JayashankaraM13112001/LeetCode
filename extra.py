@@ -1,14 +1,7 @@
-def isSubSequence(s,t):
-    s_index,t_index=0,0
-    
-    while s_index<len(s) and t_index<len(t):
-        if s[s_index]==t[t_index]:
-            s_index+=1
-        t_index+=1
-    
-    return s_index==len(s)
+import time
 
+start=time.perf_counter()
+print(sum(range(1000)))
+end=time.perf_counter()
 
-s = "abc"
-t = "ahbgdc"
-print(isSubSequence(s,t))
+print(f"Time taken: {end-start:.6f} seconds")
